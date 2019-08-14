@@ -1,7 +1,8 @@
 <h1>index</h1>
 <ul>
   <% @restaurants.each do |restaurant| %>
-  <li><%= restaurant.name %></li>
-  <p><%= restaurant.phone_number %></p>
+  <li><%= link_to restaurant.name, restaurant %></li>
   <% end %>
 </ul>
+
+<%= link_to 'create', new_restaurant_path %>
